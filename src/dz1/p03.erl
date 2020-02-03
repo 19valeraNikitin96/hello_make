@@ -8,7 +8,7 @@
 %%%-------------------------------------------------------------------
 -module(p03).
 -author("erlang").
-
+-include("header_for_macro.hrl").
 %% API
 -export([element_at/2]).
 
@@ -17,8 +17,8 @@
 %%2> p03:element_at([a,b,c,d,e,f], 10).
 %%undefined
 
-element_at([], _)->undefined;
-element_at(_, Index) when Index < 1 -> undefined;
+element_at([], _)->?NULL;
+element_at(_, Index) when Index < 1 -> ?NULL;
 element_at([H | _], 1)->H;
 element_at([_ | T], Index)->
   element_at(T, Index - 1).

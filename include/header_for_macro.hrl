@@ -4,18 +4,13 @@
 %%% @doc
 %%%
 %%% @end
-%%% Created : 24. Jan 2020 12:10
+%%% Created : 03. Feb 2020 16:47
 %%%-------------------------------------------------------------------
--module(p01).
 -author("erlang").
--include("header_for_macro.hrl").
 
-%% API
--export([last/1]).
-
-%%> p01:last([a,b,c,d,e,f]).
-%%f
-last([])->?NULL;
-last([H | []])->H;
-last([_ | T])->
-  last(T).
+-define(NULL, undefined).
+-define(V1, first).
+-define(V2, second).
+-define(V3, third).
+-define(V4, fourth).
+-define(V5, fifth).

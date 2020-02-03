@@ -9,6 +9,7 @@
 -module(p15).
 -author("erlang").
 
+-include("header_for_macro.hrl").
 %% API
 -export([replicate/2]).
 
@@ -25,7 +26,7 @@
 %%replicate(Val, Amount, Result)->
 %%  replicate(Val, Amount - 1, [Val | Result]).
 
-replicate(_, Acc)when Acc < 1->undefined;
+replicate(_, Acc)when Acc < 1->?NULL;
 replicate(List, Acc) ->
   replicate(List, Acc, Acc).
 replicate([_ | T], Acc, 0)-> replicate(T, Acc, Acc);

@@ -9,6 +9,8 @@
 -module(bs01).
 -author("erlang").
 
+-include("header_for_macro.hrl").
+
 %% API
 -export([first_word/1]).
 

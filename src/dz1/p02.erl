@@ -8,7 +8,7 @@
 %%%-------------------------------------------------------------------
 -module(p02).
 -author("erlang").
-
+-include("header_for_macro.hrl").
 %% API
 -export([but_last/1]).
 
@@ -17,8 +17,8 @@
 %%1> p02:but_last([a,b,c,d,e,f]).
 %%[e,f]
 
-but_last([])->undefined;
-but_last([_])->undefined;
+but_last([])->?NULL;
+but_last([_])->?NULL;
 but_last([H | T])->
   but_last([H | T], H).
 but_last([H | []], Prev)->[Prev | H];
